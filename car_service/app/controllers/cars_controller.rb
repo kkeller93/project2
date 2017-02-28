@@ -1,5 +1,4 @@
-class CarController < ApplicationController
-
+class CarsController < ApplicationController
   def index
     @cars = Car.all
   end
@@ -10,22 +9,22 @@ class CarController < ApplicationController
 
   def new
     @car = Car.new
-    @problem_area = Problem.all.map { |problem| problem.name }
+    @problem_area = Problem.all.map { |problem| problem.problem_title }
   end
 
   def create
-    @car = Car.new(character_params)
+    @car = Car.new(car_params)
     @car.problem = Problem.all.sample
     @car.save
     redirect_to cars_path(@car)
   end
 
   def edit
-    @car = Character.find(params[:id])
+    @car = Car.find(params[:id])
   end
 
   def update
-    @car = Character.find(params[:id])
+    @car = Car.find(params[:id])
     @car.update(car_params)
     redirect_to @car
   end

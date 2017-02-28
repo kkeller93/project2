@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    text-align: center;
+    background: grey;
+ }
+
+ img {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+  }
+
+.problem {
+  text-align: center;
+  padding: 15px;
+  display: inline-block;
+}

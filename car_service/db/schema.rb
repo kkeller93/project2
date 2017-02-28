@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170228154239) do
   end
 
   create_table "problems", force: :cascade do |t|
-    t.string "problem"
+    t.string "problem_title"
     t.string "img_url"
   end
 
