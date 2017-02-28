@@ -3,7 +3,6 @@ class CreateProblems < ActiveRecord::Migration[5.0]
     create_table :problems do |t|
       t.string :problem
       t.string :img_url
-      t.timestamps
     end
   end
 end

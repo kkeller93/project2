@@ -10,27 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228142318) do
+ActiveRecord::Schema.define(version: 20170228154239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
-    t.integer  "year"
-    t.string   "make"
-    t.string   "model"
-    t.integer  "mileage"
-    t.string   "customer"
-    t.string   "img_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "year"
+    t.string  "make"
+    t.string  "model"
+    t.integer "mileage"
+    t.string  "customer"
+    t.string  "img_url"
+    t.integer "problem_id"
+    t.index ["problem_id"], name: "index_cars_on_problem_id", using: :btree
   end
 
   create_table "problems", force: :cascade do |t|
-    t.string   "problem"
-    t.string   "img_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "problem"
+    t.string "img_url"
   end
 
+  add_foreign_key "cars", "problems"
 end

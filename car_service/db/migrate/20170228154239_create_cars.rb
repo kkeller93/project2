@@ -7,7 +7,7 @@ class CreateCars < ActiveRecord::Migration[5.0]
       t.integer :mileage
       t.string :customer
       t.string :img_url
-      t.timestamps
+      t.references :problem, index: true, foreign_key: true
     end
   end
 end
