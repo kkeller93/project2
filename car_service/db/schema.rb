@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20170228154239) do
   enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
-    t.integer "year"
+    t.string  "year"
     t.string  "make"
     t.string  "model"
-    t.integer "mileage"
+    t.string  "mileage"
     t.string  "customer"
     t.string  "img_url"
     t.integer "problem_id"

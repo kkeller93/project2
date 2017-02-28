@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # root "cars#index"
   root to: "problems#index"
 
-  resources :problems, only: [:index, :show]
-  resources :cars, only: [:index, :show, :new, :update, :edit, :create, :delete]
+  resources :problems#, only: [:index, :show]
+  resources :cars#, only: [:index, :show, :new, :update, :edit, :create, :delete]
 
 end

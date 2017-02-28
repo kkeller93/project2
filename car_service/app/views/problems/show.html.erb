@@ -1,6 +1,6 @@
 <h1><%= @problem.problem_title %></h1>
 <% @problem.cars.each do |car| %>
   <div class="car">
-    <%= link_to car.make, car_path %>
+    <h2><%= link_to car.make, car_path(car) %></h2>
   </div>
 <% end %>

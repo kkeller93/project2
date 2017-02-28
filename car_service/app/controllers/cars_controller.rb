@@ -13,8 +13,11 @@ class CarsController < ApplicationController
   end
 
   def create
+    # puts "=========================#{params.inspect}"
+    # puts "=========================#{params[:car][:problem].inspect}"
+    # puts "=========================#{Problem.find_by(problem_title: params[:problem])}"
     @car = Car.new(car_params)
-    @car.problem = Problem.all.sample
+    @car.problem = Problem.find_by(problem_title: params[:car][:problem])
     @car.save
     redirect_to cars_path(@car)
   end
@@ -37,6 +40,6 @@ class CarsController < ApplicationController
 
   private
   def car_params
-    params.require(:car).permit(:name, :img_url)
+    params.require(:car).permit(:year, :make, :model, :mileage, :customer, :img_url)
   end
 end
