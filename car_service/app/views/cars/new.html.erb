@@ -1,0 +1,23 @@
+<h1>Welcome to new vehicle creation!</h1>
+
+<%= form_for @car do |f| %>
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.label :make %>
+  <%= f.text_field :make %>
+
+  <%= f.label :model %>
+  <%= f.text_field :model %>
+
+  <%= f.label :customer %>
+  <%= f.text_field :customer %>
+
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
+  <%= f.select(:problem, options_for_select(@problem_area)) %>
+
+  <%= f.submit %>
+
+<% end %>

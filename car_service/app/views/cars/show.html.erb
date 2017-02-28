@@ -1,0 +1,6 @@
+<h1><%= @car.make %></h1>
+<h2>Problem: <%= @car.problem %></h2>
+<div class="car">
+  <img src="<%= @car.img_url %>">
+</div>
+<h3><a href="/characters/<%= @car.id %>/edit">Change the information of this vehicle</a> </h3>

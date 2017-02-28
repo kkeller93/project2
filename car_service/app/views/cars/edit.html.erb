@@ -1,0 +1,16 @@
+<h1>Edit <%= @car.make %></h1>
+
+<%= form_for @car do |f| %>
+  <%= f.label :mileage %>
+  <%= f.text_field :mileage %>
+
+  <%= f.label :customer %>
+  <%= f.text_field :customer %>
+
+  <%= f.submit %>
+
+<% end %>
+
+<%= form_for @car, method: :delete do |f| %>
+  <%= f.submit "Delete", class: "delete" %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1><%= @problem.name %></h1>
+<% @problem.cars.each do |car| %>
+  <div class="car">
+    <%= link_to car.make, car_path %>
+  </div>
+<% end %>
