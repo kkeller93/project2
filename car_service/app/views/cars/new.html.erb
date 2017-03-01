@@ -1,25 +1,30 @@
 <h1>Welcome to new vehicle creation!</h1>
 
 <%= form_for @car do |f| %>
-  <%= f.label :year %>
-  <%= f.text_field :year %>
-  <br>
-  <%= f.label :make %>
-  <%= f.text_field :make %>
-  <br>
-  <%= f.label :model %>
-  <%= f.text_field :model %>
-  <br>
-  <%= f.label :mileage %>
-  <%= f.text_field :mileage %>
-  <br>
-  <%= f.label :customer %>
+  <h4><%= f.label :customer %></h4>
   <%= f.text_field :customer %>
   <br>
-  <%= f.label :img_url %>
+  <h4><%= f.label :customer_statement %></h4>
+  <%= f.text_field :customer_statement %>
+  <br>
+  <h4><%= f.label :year %></h4>
+  <%= f.text_field :year %>
+  <br>
+  <h4><%= f.label :make %></h4>
+  <%= f.text_field :make %>
+  <br>
+  <h4><%= f.label :model %></h4>
+  <%= f.text_field :model %>
+  <br>
+  <h4><%= f.label :mileage %></h4>
+  <%= f.text_field :mileage %>
+  <br>
+  <h4><%= f.label :img_url %></h4>
   <%= f.text_field :img_url %>
   <br>
+  <br>
   <%= f.select(:problem, options_for_select(@problem_area)) %>
+  <br>
   <br>
   <%= f.submit %>
 

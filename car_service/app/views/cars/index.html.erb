@@ -1,6 +1,6 @@
 <h1>Vehicles</h1>
 <% @cars.each do |car| %>
   <div>
-    <h2><%= link_to car.make, car_path(car) %></a> - <%= car.problem.problem_title %></h2>
+    <h2><a href='<%= car_path(car) %>'><%=car.year%> <%=car.make%> <%=car.model%></a> - <%= car.problem.problem_title %></h2>
   </div>
 <% end %>

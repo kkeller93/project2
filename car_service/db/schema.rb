@@ -16,11 +16,12 @@ ActiveRecord::Schema.define(version: 20170228154239) do
   enable_extension "plpgsql"
 
   create_table "cars", force: :cascade do |t|
+    t.string  "customer"
     t.string  "year"
     t.string  "make"
     t.string  "model"
     t.string  "mileage"
-    t.string  "customer"
+    t.string  "customer_statement"
     t.string  "img_url"
     t.integer "problem_id"
     t.index ["problem_id"], name: "index_cars_on_problem_id", using: :btree

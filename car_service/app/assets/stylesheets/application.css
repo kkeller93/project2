@@ -13,19 +13,28 @@
  *= require_tree .
  *= require_self
  */
- body {
-    text-align: center;
-    background: grey;
- }
+body {
+  text-align: center;
+  background: grey;
+}
 
- img {
-    width: 200px;
-    height: 200px;
-    border-radius: 30px;
-  }
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+}
+
+.car_img {
+  width: 550px;
+  height: 400px;
+}
 
 .problem {
   text-align: center;
   padding: 15px;
   display: inline-block;
+}
+
+h4 {
+  margin-bottom: 0px;
 }

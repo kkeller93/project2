@@ -1,9 +1,10 @@
 
 <h1><%= @car.year %> <%= @car.make %> <%= @car.model %></h1>
 <h2>Mileage: <%= @car.mileage %> miles</h2>
-<h2>Problem: <%= @car.customer %></h2>
+<h2>Vehicle Owner: <%= @car.customer %></h2>
+<h2>Problem: <%= @car.customer_statement %></h2>
 
 <div class="car">
-  <img src="<%= @car.img_url %>">
+  <img class="car_img" src="<%= @car.img_url %>">
 </div>
 <h3><a href="/cars/<%= @car.id %>/edit">Update Vehicle Info</a> </h3>

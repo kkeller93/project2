@@ -1,7 +1,8 @@
 <h1>Categories</h1>
 <% @problems.each do |issue| %>
   <div class="problem">
-    <h2><a href="<%= problem_path(issue) %>"><%= issue.problem_title %></a></h2>
-    <img src="<%= issue.img_url %>">
+    <h2><a href="<%= problem_path(issue) %>"><%= issue.problem_title %>
+      <br>
+      <img src="<%= issue.img_url %>"></a></h2>
   </div>
 <% end %>
