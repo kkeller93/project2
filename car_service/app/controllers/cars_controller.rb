@@ -13,9 +13,6 @@ class CarsController < ApplicationController
   end
 
   def create
-    # puts "=========================#{params.inspect}"
-    # puts "=========================#{params[:car][:problem].inspect}"
-    # puts "=========================#{Problem.find_by(problem_title: params[:problem])}"
     @car = Car.new(car_params)
     @car.problem = Problem.find_by(problem_title: params[:car][:problem])
     @car.save
