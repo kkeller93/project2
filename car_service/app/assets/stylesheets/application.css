@@ -35,6 +35,11 @@ img {
   display: inline-block;
 }
 
+.logo {
+  width: 600px;
+  height: 550px;
+}
+
 h4 {
   margin-bottom: 0px;
 }
